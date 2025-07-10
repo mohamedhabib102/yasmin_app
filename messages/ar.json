@@ -100,6 +100,19 @@
     "noAccount": "ليس لديك حساب؟",
     "registerHere": "سجل هنا"
   },
+  "PasswordReset": {
+    "sendCodeTitle": "إعادة تعيين كلمة المرور",
+    "sendCodeDescription": "أدخل بريدك الإلكتروني لاستلام رمز التحقق.",
+    "sendCodeButton": "إرسال الرمز",
+    "verifyCodeTitle": "التحقق من الرمز",
+    "verifyCodeDescription": "أدخل الرمز المكون من 4 أرقام المرسل إلى بريدك الإلكتروني.",
+    "verifyButton": "تحقق",
+    "changePasswordTitle": "تغيير كلمة المرور",
+    "newPassword": "كلمة المرور الجديدة",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "changePasswordButton": "تغيير كلمة المرور",
+    "backToLogin": "العودة لتسجيل الدخول"
+  },
   "RegisterPage": {
     "title": "تسجيل",
     "name": "الاسم",

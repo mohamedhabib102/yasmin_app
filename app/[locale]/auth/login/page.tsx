@@ -3,12 +3,16 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { FaCheck } from "react-icons/fa6";
+import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const t =  useTranslations("LoginPage");
+  const locale = useLocale()
 
   return (
-    <form className="bg-[#f5f5f5] p-6  space-y-6 py-4">
+    <form className="bg-[#f5f5f5] p-6  space-y-6 py-4" dir={locale === "ar" ? "rtl" : "ltr"}>
       {/* Email or Username */}
       <div className="relative flex items-center border bg-[#F8F8F8] border-[#FE93B9] rounded-md overflow-hidden">
         <span className="absolute h-full bg-[#FE93B9] px-2 left-0 flex justify-center items-center">
@@ -16,7 +20,7 @@ export default function LoginPage() {
         </span>
         <input
           type="text"
-          placeholder="Username or Email"
+          placeholder={t("email")}
           className="w-full outline-none bg-[#F8F8F8] px-3 py-2 pl-10"
           name="email"
           autoComplete="email"
@@ -30,7 +34,7 @@ export default function LoginPage() {
         </span>
         <input
           type={showPassword ? 'text' : 'password'}
-          placeholder="Password"
+          placeholder={t("password")}
           className="w-full outline-none bg-[#F8F8F8] px-3 py-2 pl-10"
           name="password"
         />
@@ -56,17 +60,17 @@ export default function LoginPage() {
               <FaCheck className='mt-[1px]' />
             </span>
           </div>
-          Remember me
+          {t("rememberMe")}
         </label>
-        <a href="#" className="text-[#FF3B30] hover:underline">Forgot password?</a>
+        <Link href="/auth/send-to-email" className="text-[#FF3B30] hover:underline">{t("forgotPassword")}</Link>
       </div>
 
       {/* Login Button */}
       <button
         type="submit"
-        className="w-full bg-[#FE93B9] text-[#393939] py-2 rounded-md  transition"
+        className="w-full bg-[#FE93B9] text-[#393939] py-2 rounded-md  transition hover:bg-[#ef91b2] hover:text-[#f5f5f5]"
       >
-        Login
+        {t("title")}
       </button>
     </form>
   );

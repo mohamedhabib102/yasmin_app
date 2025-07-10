@@ -100,6 +100,19 @@
     "noAccount": "Don't have an account?",
     "registerHere": "Register here"
   },
+  "PasswordReset": {
+    "sendCodeTitle": "Reset Password",
+    "sendCodeDescription": "Enter your email to receive a verification code.",
+    "sendCodeButton": "Send Code",
+    "verifyCodeTitle": "Verify Code",
+    "verifyCodeDescription": "Enter the 4-digit code sent to your email.",
+    "verifyButton": "Verify",
+    "changePasswordTitle": "Change Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "changePasswordButton": "Change Password",
+    "backToLogin": "Back to Login"
+  },
   "RegisterPage": {
     "title": "Register",
     "name": "Name",

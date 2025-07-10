@@ -163,7 +163,7 @@ export default function SignupPage() {
       </div>
 
       {/* Submit */}
-      <button className="w-full bg-[#FE93B9] text-[#393939] py-2 rounded-md cursor-pointer">
+      <button className="w-full bg-[#FE93B9] text-[#393939] py-2 rounded-md cursor-pointer hover:bg-[#ef91b2] hover:text-[#f5f5f5]" >
         Sign Up
       </button>
     </div>
