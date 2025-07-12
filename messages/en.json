@@ -10,7 +10,8 @@
     "activity": "Activity",
     "privacy": "Privacy",
     "help": "Help",
-    "account": "Account"
+    "account": "Account",
+    "dashboard": "Dashboard"
   },
   "Landing": {
     "title": "Welcome to Our Online Store",

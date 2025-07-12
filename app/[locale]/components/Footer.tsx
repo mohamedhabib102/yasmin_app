@@ -59,7 +59,7 @@ export default  function Footer() {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center py-4 text-[#393939]"><p>&copy; {t("copyright")}</p> <a href="#">{t("privacyPolicy")}</a></div>
+                <div className="flex justify-between items-center py-4 text-[#393939]"><p>{t("copyright")}</p> <a href="#">{t("privacyPolicy")}</a></div>
             </div> 
         </footer>
     )

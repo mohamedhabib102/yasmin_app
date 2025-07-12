@@ -12,6 +12,9 @@ import {
   FiHome, FiBox, FiMail, FiActivity, FiShield, FiHelpCircle,
   FiUser, FiSearch, FiShoppingCart, FiInstagram, FiGift
 } from "react-icons/fi";
+import { MdDashboard } from "react-icons/md";
+
+
 
 type NavItem = {
   key: string;
@@ -75,6 +78,12 @@ export default function Navbar() {
     {
       items: [
         { key: "account", path: ["/auth/login", "/auth/signup"], icon: <FiUser size={20} />, activeIcon: <FiUser size={20} className="text-white" /> }
+      ]
+    },
+    {
+      title: "dashboard",
+      items: [
+        { key: "dashboard", path: "/dashboard", icon: <MdDashboard size={20} />, activeIcon: <MdDashboard  color={"#fff"} size={20} className="text-white" /> }
       ]
     }
   ];
