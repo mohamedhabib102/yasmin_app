@@ -199,5 +199,18 @@
     "Home": "الرئيسية",
     "Help": "المساعدة"
   }
+},
+"dashboard": {
+  "nav": {
+    "users": "المستخدمين",
+    "products": "المنتجات",
+    "brands": "العلامات التجارية"
+  },
+  "navContent": {
+    "usersContent": "صفحة المستخدمين",
+    "productsContent": "صفحة المنتجات",
+    "brandsContent": "صفحة العلامات التجارية"
+  }
 }
+
 }

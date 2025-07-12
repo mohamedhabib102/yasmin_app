@@ -217,5 +217,17 @@
   "Home": "Home",
   "Priv": "Privacy"
   }
+  },
+  "dashboard": {
+    "nav": {
+      "users": "Users",
+      "products": "Products",
+      "brands": "Brands"
+    },
+    "navContent": {
+      "usersContent": "Users Page", 
+      "productsContent": "Products Page", 
+      "brandsContent": "Brands Page" 
+    }
   }
 }
