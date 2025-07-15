@@ -219,16 +219,22 @@
   "Priv": "Privacy"
   }
   },
-  "dashboard": {
+"dashboard": {
     "nav": {
       "users": "Users",
       "products": "Products",
-      "brands": "Brands"
+      "brands": "Brands",
+      "orders": "Orders",
+      "settings": "Settings"
     },
     "navContent": {
-      "usersContent": "Users Page", 
-      "productsContent": "Products Page", 
-      "brandsContent": "Brands Page" 
-    }
+      "usersContent": "User List",
+      "productsContent": "Manage Products",
+      "brandsContent": "Available Brands",
+      "ordersContent": "Customer Orders",
+      "settingsContent": "System Settings"
+    },
+    "addProduct": "Add Product"
   }
+  
 }

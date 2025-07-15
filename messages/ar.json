@@ -201,16 +201,21 @@
   }
 },
 "dashboard": {
-  "nav": {
-    "users": "المستخدمين",
-    "products": "المنتجات",
-    "brands": "العلامات التجارية"
-  },
-  "navContent": {
-    "usersContent": "صفحة المستخدمين",
-    "productsContent": "صفحة المنتجات",
-    "brandsContent": "صفحة العلامات التجارية"
+    "nav": {
+      "users": "المستخدمين",
+      "products": "المنتجات",
+      "brands": "الماركات",
+      "orders": "الطلبات",
+      "settings": "الإعدادات"
+    },
+    "navContent": {
+      "usersContent": "قائمة المستخدمين",
+      "productsContent": "إدارة المنتجات",
+      "brandsContent": "الماركات المتوفرة",
+      "ordersContent": "طلبات العملاء",
+      "settingsContent": "إعدادات النظام"
+    },
+    "addProduct": "إضافة منتج"
   }
-}
 
 }

@@ -1,33 +1,43 @@
-"use client"
+
+"use client";
+
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+export default function NavDashboard() {
+  const locale = useLocale();
+  const pathName = usePathname();
+  const t = useTranslations("dashboard");
 
+  const links = [
+    { href: "/dashboard/users", label: t("nav.users") },
+    { href: "/dashboard/products", label: t("nav.products") },
+    { href: "/dashboard/brands", label: t("nav.brands") },
+    { href: "/dashboard/orders", label: t("nav.orders") },
+    { href: "/dashboard/settings", label: t("nav.settings") },
+  ];
 
-export default function NavDashboard(){
-    const locale = useLocale()
-    const pathName =  usePathname();
-    const t = useTranslations("dashboard");
-    return (
-        <ul>
-            <li className="mb-2.5 last:mb-0"><Link
-            href={`/${locale}/dashboard/users`}
-            className={`py-2.5 px-4 rounded-lg block text-[18px] ${pathName === `/${locale}/dashboard/users` ? "text-white bg-gradient-to-r from-[#FE93B9] to-[#9A3E63] border-[1px] border-transparent border-l-[#9A3E63]" 
-            : "bg-[#bf90a3] text-black"}`}
+  return (
+    <ul className="space-y-2">
+      {links.map((link) => {
+        const fullPath = `/${locale}${link.href}`;
+        const isActive = pathName === fullPath;
+        return (
+          <li key={link.href}>
+            <Link
+              href={fullPath}
+              className={`block px-4 py-2.5 rounded-lg text-[18px] transition-all duration-200 ${
+                isActive
+                  ? "text-white bg-gradient-to-r from-[#FE93B9] to-[#9A3E63]"
+                  : "bg-[#f0dbe3] text-black hover:bg-[#ecc9d7]"
+              }`}
             >
-                {t("nav.users")}
-            </Link></li>
-            <li className="mb-2.5 last:mb-0"><Link 
-            href={`/${locale}/dashboard/products`}
-            className={`py-2.5 px-4 rounded-lg block  text-[18px] ${pathName === `/${locale}/dashboard/products` ? "text-white bg-gradient-to-r from-[#FE93B9] to-[#9A3E63] border-[1px] border-transparent border-l-[#9A3E63]" 
-            : "bg-[#bf90a3] text-black"}`}
-            >{t("nav.products")}</Link></li>
-            <li className="mb-2.5 last:mb-0"><Link 
-            href={`/${locale}/dashboard/barnds`}
-            className={`py-2.5 px-4 rounded-lg block  text-[18px] ${pathName === `/${locale}/dashboard/barnds` ? "text-white bg-gradient-to-r from-[#FE93B9] to-[#9A3E63] border-[1px] border-transparent border-l-[#9A3E63]" 
-            : "bg-[#bf90a3] text-black"}`}
-            >{t("nav.brands")}</Link></li>
-        </ul>
-    )
+              {link.label}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
 }
