@@ -8,13 +8,19 @@ import { FiInstagram } from "react-icons/fi";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function ContactPage() {
   const t = useTranslations("ContactPage");
 
   return (
-    <section className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 transition-all duration-300">
-      {/* ✅ Breadcrumb */}
+        <motion.section
+        initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 transition-all duration-300"
+    >
+            {/* ✅ Breadcrumb */}
     <div className="flex items-center gap-2 mb-8 text-[#393939] text-sm md:text-base">
         <Link href="/" className="text-[#868686] hover:underline transition-all">
           {t("breadcrumb.home")}
@@ -123,6 +129,6 @@ export default function ContactPage() {
           </button>
         </form>
       </div>
-    </section>
+    </motion.section>
   );
 }

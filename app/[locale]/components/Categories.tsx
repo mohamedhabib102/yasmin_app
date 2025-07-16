@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Heart, Star } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 // أنواع البيانات
 type Category = {
@@ -127,7 +128,11 @@ export default function Categories({ search, category }: CategoriesProps) {
   };
 
   return (
-    <div className="w-full px-4 md:px-10 transition-all duration-300">
+    <motion.div 
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="w-full px-4 md:px-10 transition-all duration-300">
       <div className="flex gap-3 flex-wrap py-6 mb-8 justify-center">
         {categories.map((cat) => (
           <button
@@ -203,6 +208,6 @@ export default function Categories({ search, category }: CategoriesProps) {
       </div>
 
       <div ref={loaderRef} className="h-10"></div>
-    </div>
+    </motion.div>
   );
 }

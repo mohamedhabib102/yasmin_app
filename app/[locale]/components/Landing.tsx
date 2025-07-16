@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Landing() {
   const categories = [
@@ -12,8 +13,13 @@ export default function Landing() {
   ];
 
   return (
-    <section className="landing">
-      <Image
+    <motion.section
+    className="landing"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    >
+            <Image
         src={"/landing.svg"}
         width={1920}
         height={1080}
@@ -66,7 +72,6 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      
-    </section>
+    </motion.section>
   );
 }

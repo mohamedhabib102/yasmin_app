@@ -3,6 +3,7 @@
 import { useLocale, useTranslations } from "next-intl"
 import { useState } from "react"
 import { HiOutlineChevronDown } from "react-icons/hi"
+import { motion } from "framer-motion";
 
 
 
@@ -19,8 +20,13 @@ export default function ListPrivacy(){
     }
     return (
 
-        <div className="mt-11 pt-20 text-center w-2/3 m-auto" dir={locale === "ar" ? "rtl" : "ltr"}>
-            <div className={`text-left mb-2.5 last:mb-0 py-4 border-b border-b-[#FE93B9] ${active === 1 ? "max-h-[500px]" : "max-h-[90px]"}`}>
+      <motion.div
+      className="mt-11 pt-20 text-center lg:w-2/3 m-auto w-full" dir={locale === "ar" ? "rtl" : "ltr"}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      >
+        <div className={`text-left mb-2.5 last:mb-0 py-4 border-b border-b-[#FE93B9] ${active === 1 ? "max-h-[500px]" : "max-h-[90px]"}`}>
               <p className="flex items-center justify-between">{t("list.one.title")} <HiOutlineChevronDown 
               onClick={() => toggle(1)}
               className={`${active === 1 ? "rotate-180" : "rotate-0"} cursor-pointer transition`}
@@ -43,6 +49,6 @@ export default function ListPrivacy(){
               color="#393939" size={30}/></p>
               <div className={` transition py-4 px-2 mt-2 rounded-lg text-[393939] bg-[#EEE] ${active === 3 ? " opacity-100 visible" : "invisible opacity-0"}`}>{t("list.three.description")}</div>
             </div>
-        </div>
+      </motion.div>
     )
 }

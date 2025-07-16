@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
+import { motion } from "framer-motion";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathName = usePathname();
@@ -22,8 +23,14 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         <div className='font-semibold'>Account</div>
       </div>
 
-      <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-100 px-4 max-[575px]:min-h-auto max-[575px]:py-12">
-        <div className="w-3/5 space-y-8 max-[767px]:w-full">
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-100 px-4 max-[575px]:min-h-auto max-[575px]:py-12"
+          >
+                    <div className="w-3/5 space-y-8 max-[767px]:w-full">
           {/* Navigation buttons */}
           <div className="flex justify-between">
             <Link href="/auth/login">
@@ -52,9 +59,11 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
           </div>
 
           {/* Page Content */}
-          <div>{children}</div>
+          <div>
+          {children}
+          </div>
         </div>
-      </div>
+          </motion.div>
     </div>
     </section>
   );
