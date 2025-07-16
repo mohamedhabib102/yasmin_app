@@ -101,6 +101,17 @@
     "noAccount": "Don't have an account?",
     "registerHere": "Register here"
   },
+  "helpPage": {
+    "links": {
+    "Home": "Home",
+    "Help": "Help"
+    },
+    "title": "How Can We Help?",
+    "description": "Lorem ipsum dolor sit amet consectetur. Phasellus fermentum purus eget eros feugiat amet in habitant accumsan.",
+    "sectionTitle": "Help & Support",
+    "sectionDescription": "Lorem ipsum dolor sit amet consectetur. Phasellus fermentum purus eget eros feugiat amet in habitant accumsan.",
+    "contactSupport": "Contact Support"
+  },
   "PasswordReset": {
     "sendCodeTitle": "Reset Password",
     "sendCodeDescription": "Enter your email to receive a verification code.",
@@ -137,10 +148,6 @@
     "contactSupport": "Contact Support",
     "submitTicket": "Submit Ticket",
     "liveChat": "Live Chat"
-  },
-  "PrivacyPage": {
-    "title": "Privacy Policy",
-    "description": "Your privacy matters to us. Read our policy to learn how we protect your data."
   },
   "ContactPage": {
     "title": "Contact Us",
@@ -213,12 +220,28 @@
     "Help": "Help"
     }
   },
-  "Privacy": {
+"Privacy": {
   "links": {
-  "Home": "Home",
-  "Priv": "Privacy"
-  }
+    "Home": "Home",
+    "Priv": "Privacy"
   },
+  "title": "Privacy",
+  "description": "We value your privacy and are committed to protecting your personal information. Please review the following details to understand how we collect, use, and secure your data.",
+  "list": {
+    "one": {
+      "title": "We collect only the necessary information to provide and improve our services.",
+      "description": "This includes details like your email address, preferences, and usage patterns to help us deliver a better and more personalized experience."
+    },
+    "two": {
+      "title": "Your data will never be shared with third parties without your consent.",
+      "description": "We respect your privacy and guarantee that any sharing of information will only occur if you explicitly agree or if required by law."
+    },
+    "three": {
+      "title": "You have the right to access, update, or delete your personal information at any time.",
+      "description": "You can contact our support team to request changes or removal of your data. We will process your request promptly and confirm once completed."
+    }
+  }
+},
 "dashboard": {
     "nav": {
       "users": "Users",

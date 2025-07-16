@@ -1,6 +1,8 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { HiOutlineChevronDown } from "react-icons/hi";
+import ListPrivacy from "../components/listPrivacy";
 
 export const metadata = {
   title: "Privacy",
@@ -27,7 +29,12 @@ export default function Help(){
                     />
                     <span className="font-semibold text-[#393939]">{t("links.Priv")}</span>
                   </div>  
-                <h1>Help Page</h1>
+                <div className="text-center ">
+                  <h1 className="font-bold text-3xl text-[#393939] mb-4">{t("title")}</h1>
+                  <p className="font-normal leading-6 lg:w-1/2 w-auto m-auto text-[#393939]">{t("description")}</p>
+                </div>
+
+                <ListPrivacy />
             </div>
         </section>
     )
